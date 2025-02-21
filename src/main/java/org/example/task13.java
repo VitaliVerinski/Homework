@@ -8,8 +8,7 @@ public class task13 {
         for (int i = 0; i < a; i++) {
             array[i][i] = 1;
         }
-        System.out.println(Arrays.toString(array));
-      //  diagonal(array);
+        diagonal(array);
     }
 
     public static void diagonal(int[][] array) {
