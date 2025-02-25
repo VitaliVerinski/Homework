@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Arrays;
 
-public class task14 {
+public class Task14 {
     public static void main(String[] args) {
         int len = 7;
         int initialValue = 8;

@@ -1,6 +1,6 @@
 package org.example;
 
-public class task7 {
+public class Task7 {
     public static boolean downOrUP(int a) {
         return a < 0;
     }

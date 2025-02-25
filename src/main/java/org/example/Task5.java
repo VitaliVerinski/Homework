@@ -1,6 +1,6 @@
 package org.example;
 
-public class task5   {
+public class Task5 {
     public static boolean sumRange(int a, int b) {
         int sum = a + b;
         return sum >= 10 && sum <= 20;
