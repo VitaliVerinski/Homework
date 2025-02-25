@@ -1,7 +1,6 @@
 package org.example;
-import java.util.Arrays;
 
-public class task13 {
+public class Task13 {
     public static void main(String[] args) {
         int a = 5;
         int[][] array = new int[a][a];

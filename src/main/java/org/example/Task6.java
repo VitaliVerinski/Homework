@@ -1,6 +1,6 @@
 package org.example;
 
-public class task6 {
+public class Task6 {
     public static void upOrDown(int a) {
         if (a >= 0) {
             System.out.println("Число положительное");

@@ -1,6 +1,6 @@
 package org.example;
 
-public class task9 {
+public class Task9 {
 
     public static boolean bigYear(int a) {
         if (a % 400 == 0) {

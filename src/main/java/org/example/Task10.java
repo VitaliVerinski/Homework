@@ -1,7 +1,7 @@
 package org.example;
 import java.util.Arrays;
 
-public class task10 {
+public class Task10 {
     public static void main(String[] args) {
         int[] nums = {0, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         replace(nums);
