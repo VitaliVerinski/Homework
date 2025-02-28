@@ -1,0 +1,39 @@
+package org.example;
+
+public class Park {
+    public String name;
+    public String time;
+    public double count;
+
+    public Park (String _name, String _time, double _count) {
+        this.name = _name;
+        this.time = _time;
+        this.count = _count;
+
+    }
+
+    public static class attraction {
+        public String nameAttraction;
+        public String timeAttraction;
+        public double countAttraction;
+
+        public attraction(String _nameAttraction, String _timeAttraction, double _countAttraction) {
+            this.nameAttraction = _nameAttraction;
+            this.timeAttraction = _timeAttraction;
+            this.countAttraction = _countAttraction;
+        }
+
+        public void infoAttraction() {
+            System.out.println("название аттракциона " + nameAttraction + " время работы "
+                    + timeAttraction + " Стоимость " + countAttraction);
+
+        }
+    }
+    public static void main (String[] args) {
+        attraction attraction1 = new attraction("Супер 8", " 12.00 - 19.00", 13.62);
+        attraction1.infoAttraction();
+        attraction attraction2 = new attraction("Колесо обозрения", " 11.00 - 19.00", 10.55);
+        attraction2.infoAttraction();
+    }
+
+}
