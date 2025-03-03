@@ -4,14 +4,31 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Cat catBoris = new Cat("Борис");
+        Dog dogBobik = new Dog("Бобик");
+        Cat catSnezok = new Cat("Снежок");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        catSnezok.run(80);
+        catSnezok.swim(0);
+
+        catBoris.run(60);
+        catBoris.swim(5);
+
+        dogBobik.run(200);
+        dogBobik.swim(6);
+
+        // Выводим общее количество животных
+        System.out.println("Всего животных: " + Animal.infoAllAnimals());
+        System.out.println("Всего котов: " + Animal.infoAllCats());
+        System.out.println("Всего собак: " + Animal.infoAllDogs());
+
+        Bowl bowl = new Bowl(30);
+        Cat.setBowl(bowl);
+
+
+        // Коты пытаются покушать
+        catBoris.eat(10);
+        catSnezok.eat(20);
+        catBoris.eat(5);
     }
 }
