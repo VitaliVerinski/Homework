@@ -27,7 +27,9 @@ public class Main {
 
         catBoris.eat(10);
         catSnezok.eat(20);
-        catBoris.eat(5);
+        catBoris.eat(10);
+        bowl.addFood(15);
+        catBoris.eat(10);
 
         Task2 circle = new Circle(5, "Красный", "Черный");
         Task2 rectangle = new Rectangle(4, 6, "Зеленый", "Черный");

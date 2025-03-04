@@ -14,10 +14,12 @@ public class Animal {
     }
 
     public static int infoAllCats() {
+
         return allCats;
     }
 
     public static int infoAllDogs() {
+
         return allDogs;
     }
     }

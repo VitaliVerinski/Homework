@@ -3,8 +3,9 @@ package org.example;
 public class Bowl {
     public int food;
 
-    public Bowl(int _food) {
-        this.food = _food;
+    public Bowl(int food)
+    {
+        this.food = food;
     }
 
     public int getFood() {
@@ -19,5 +20,6 @@ public class Bowl {
 
     public void addFood(int amount) {
         food += amount;
+        System.out.println("добавлено еды " + amount);
     }
 }

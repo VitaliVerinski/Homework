@@ -17,12 +17,12 @@ public class Triangle implements Task2 {
 
     @Override
     public String getFillColor() {
-        return "";
+        return fillColor;
     }
 
     @Override
     public String getBorderColor() {
-        return "";
+        return borderColor;
     }
 
     @Override
