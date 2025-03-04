@@ -5,19 +5,19 @@ public class Park {
     public String time;
     public double count;
 
-    public Park (String _name, String _time, double _count) {
-        this.name = _name;
-        this.time = _time;
-        this.count = _count;
+    public Park (String name, String time, double count) {
+        this.name = name;
+        this.time = time;
+        this.count = count;
 
     }
 
-    public static class attraction {
+    public static class Attraction {
         public String nameAttraction;
         public String timeAttraction;
         public double countAttraction;
 
-        public attraction(String _nameAttraction, String _timeAttraction, double _countAttraction) {
+        public Attraction(String _nameAttraction, String _timeAttraction, double _countAttraction) {
             this.nameAttraction = _nameAttraction;
             this.timeAttraction = _timeAttraction;
             this.countAttraction = _countAttraction;
@@ -30,9 +30,9 @@ public class Park {
         }
     }
     public static void main (String[] args) {
-        attraction attraction1 = new attraction("Супер 8", " 12.00 - 19.00", 13.62);
+        Attraction attraction1 = new Attraction("Супер 8", " 12.00 - 19.00", 13.62);
         attraction1.infoAttraction();
-        attraction attraction2 = new attraction("Колесо обозрения", " 11.00 - 19.00", 10.55);
+        Attraction attraction2 = new Attraction("Колесо обозрения", " 11.00 - 19.00", 10.55);
         attraction2.infoAttraction();
     }
 

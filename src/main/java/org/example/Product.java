@@ -19,12 +19,8 @@ package org.example;
         }
 
         public void info() {
-            System.out.println("Название: " + name);
-            System.out.println("Дата производства: " + date);
-            System.out.println("Производитель: " + manufacturer);
-            System.out.println("Страна происхождения: " + country);
-            System.out.println("Цена: " + price + " руб.");
-            System.out.println("Состояние бронирования: " + reservation);
+            System.out.println("Название: " + name + "Дата производства: " + date + "Производитель: " + manufacturer
+            +"Страна происхождения: " + country + "Цена: " + price + " руб." + "Состояние бронирования: " + reservation);
         }
 
         public static void main(String[] args) {
