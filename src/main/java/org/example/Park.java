@@ -29,11 +29,5 @@ public class Park {
 
         }
     }
-    public static void main (String[] args) {
-        Attraction attraction1 = new Attraction("Супер 8", " 12.00 - 19.00", 13.62);
-        attraction1.infoAttraction();
-        Attraction attraction2 = new Attraction("Колесо обозрения", " 11.00 - 19.00", 10.55);
-        attraction2.infoAttraction();
-    }
 
 }
