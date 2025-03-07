@@ -1,9 +1,15 @@
 package org.example;
 
 public class Cat extends Animal{
-    public String name;
-    public boolean catFull;
-    public static Bowl bowl;
+    private String name;
+    private boolean catFull;
+    private static Bowl bowl;
+    private static int allCats = 0;
+
+    public static int infoAllCats() {
+
+        return allCats;
+    }
 
     public Cat (String name ){
         super();

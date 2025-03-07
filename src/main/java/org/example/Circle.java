@@ -1,10 +1,10 @@
 package org.example;
 
-public class Circle implements Task2 {
+public class Circle implements Interface {
 
-    public double radius;
-    public String fillColor;
-    public String borderColor;
+    private double radius;
+    private String fillColor;
+    private String borderColor;
 
 
 

@@ -1,10 +1,10 @@
 package org.example;
 
-public class Rectangle implements Task2 {
-    public double width;
-    public double height;
-    public String fillColor;
-    public String borderColor;
+public class Rectangle implements Interface {
+    private double width;
+    private double height;
+    private String fillColor;
+    private String borderColor;
 
     public Rectangle(double width, double height, String fillColor, String borderColor) {
         this.width = width;

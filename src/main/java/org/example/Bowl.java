@@ -1,7 +1,7 @@
 package org.example;
 
 public class Bowl {
-    public int food;
+    private int food;
 
     public Bowl(int food)
     {

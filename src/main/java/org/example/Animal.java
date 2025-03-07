@@ -1,9 +1,8 @@
 package org.example;
 
-public class Animal {
+abstract class Animal {
     public static int allAnimals = 0;
-    public static int allCats = 0;
-    public static int allDogs = 0;
+
 
     public Animal() {
         allAnimals++;
@@ -12,15 +11,14 @@ public class Animal {
     public static int infoAllAnimals() {
         return allAnimals;
     }
+    public void run(int distance) {
 
-    public static int infoAllCats() {
+    }
+    public void swim(int distance) {
 
-        return allCats;
     }
 
-    public static int infoAllDogs() {
 
-        return allDogs;
-    }
-    }
+
+}
 

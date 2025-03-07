@@ -1,11 +1,11 @@
 package org.example;
 
-public class Triangle implements Task2 {
-    public double sideA;
-    public double sideB;
-    public double sideC;
-    public String fillColor;
-    public String borderColor;
+public class Triangle implements Interface {
+    private double sideA;
+    private double sideB;
+    private double sideC;
+    private String fillColor;
+    private String borderColor;
 
     public Triangle(double sideA, double sideB, double sideC, String fillColor, String borderColor) {
         this.sideA = sideA;

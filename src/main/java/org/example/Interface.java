@@ -1,6 +1,6 @@
 package org.example;
 
-public interface Task2 {
+public interface Interface {
     String getFillColor();
     String getBorderColor();
 

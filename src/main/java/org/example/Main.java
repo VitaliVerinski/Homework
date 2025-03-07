@@ -19,8 +19,8 @@ public class Main {
 
 
         System.out.println("Всего животных: " + Animal.infoAllAnimals());
-        System.out.println("Всего котов: " + Animal.infoAllCats());
-        System.out.println("Всего собак: " + Animal.infoAllDogs());
+        System.out.println("Всего котов: " + Cat.infoAllCats());
+        System.out.println("Всего собак: " + Dog.infoAllDogs());
 
         Bowl bowl = new Bowl(30);
         Cat.setBowl(bowl);
@@ -31,9 +31,9 @@ public class Main {
         bowl.addFood(15);
         catBoris.eat(10);
 
-        Task2 circle = new Circle(5, "Красный", "Черный");
-        Task2 rectangle = new Rectangle(4, 6, "Зеленый", "Черный");
-        Task2 triangle = new Triangle(3, 4, 5, "Красный", "Синий");
+        Interface circle = new Circle(5, "Красный", "Черный");
+        Interface rectangle = new Rectangle(4, 6, "Зеленый", "Черный");
+        Interface triangle = new Triangle(3, 4, 5, "Красный", "Синий");
 
         System.out.println("Круг: ");
         System.out.println("Цвет фона: " + circle.getFillColor());
@@ -53,4 +53,4 @@ public class Main {
         System.out.println("Периметр: " + triangle.calculatePerimeter());
         System.out.println("Площадь: " + triangle.calculateArea());
     }
-    }
+}
