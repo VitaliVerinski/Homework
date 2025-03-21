@@ -21,7 +21,7 @@ public class TelephoneDirectory {
         if (!numbers.contains(phoneNumber)) {
             numbers.add(phoneNumber);
             phoneToSurname.put(phoneNumber, surname);
-            return true;// Запоминаем, к какой фамилии принадлежит номер
+            return true;
         } else {
             System.out.println("Ошибка: номер " + phoneNumber + " уже добавлен для " + surname);
             return false;
