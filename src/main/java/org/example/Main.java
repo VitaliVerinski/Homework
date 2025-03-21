@@ -9,19 +9,22 @@ public class Main {
         students.add(new Student("Анна", "Группа 2", 2, 6));
         students.add(new Student("Сергей", "Группа 1", 1, 3));
         students.add(new Student("Геннадий", "Группа 2", 1, 2));
-        Student.infoStudents(students, 1);
-        Student.kickStudent(students);
-        Student.upStudents(students);
-        Student.infoStudents(students, 2);
-        Student.infoStudents(students, 3);
-
+        Dekanat.infoStudents(students, 1);
+        Dekanat.kickStudent(students);
+        Dekanat.upStudents(students);
+        Dekanat.infoStudents(students, 2);
+        Dekanat.infoStudents(students, 3);
         TelephoneDirectory td = new TelephoneDirectory();
-        td.add("Иванов", 41235123);
-        td.add("Иванов", 41235123);
-        td.add("Петров", 42342342);
-
+        td.add("Иванов", 123456);
+        td.add("Иванов", 123456);
+        td.add("Иванов", 1234567);
+        td.add("Петров", 123456);
+        td.add("Петров", 123456789);
+        td.add("Сидоров", 123456);
+        td.add("Сидоров", 42342342);
         System.out.println("Телефоны Иванова: " + td.get("Иванов"));
         System.out.println("Телефоны Петрова: " + td.get("Петров"));
+        System.out.println("Телефоны сидорова: " + td.get("Сидоров"));
     }
 
 }
