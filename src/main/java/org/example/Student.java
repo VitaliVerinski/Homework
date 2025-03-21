@@ -11,16 +11,16 @@ public class Student {
         this.course = course;
         this.grade =grade;
     }
-    public double getGrade() {
+    protected double getGrade() {
         return grade;
     }
-    public void up() {
+    protected void up() {
         this.course++;
     }
-    public String getName() {
+    protected String getName() {
         return name;
     }
-    public int getCourse() {
+    protected int getCourse() {
         return course;
     }
 }
