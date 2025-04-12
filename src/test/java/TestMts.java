@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class testMts {
+public class TestMts {
     private WebDriver driver;
     private MtsPage mtsPage;
 
@@ -17,6 +17,8 @@ public class testMts {
         driver.manage().window().maximize();
         mtsPage = new MtsPage(driver);
         driver.get("http://mts.by");
+        WebElement button = driver.findElement(By.xpath("//*[text()='Принять']"));
+        button.click();
     }
 
     @Test

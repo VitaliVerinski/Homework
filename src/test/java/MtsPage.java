@@ -6,7 +6,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MtsPage {
     private WebDriver driver;
-
     public MtsPage(WebDriver driver) {
         this.driver = driver;
     }
