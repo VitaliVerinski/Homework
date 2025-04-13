@@ -6,44 +6,81 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.List;
 
 public class TestMts {
-    private WebDriver driver;
+    public WebDriver driver;
     private MtsPage mtsPage;
 
     @Before
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        mtsPage = new MtsPage(driver);
         driver.get("http://mts.by");
-        WebElement button = driver.findElement(By.xpath("//*[text()='Принять']"));
-        button.click();
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Принять']"))).click();
+        mtsPage = new MtsPage(driver);
     }
 
     @Test
     public void testOnlineReplenishmentBlockTitle() {
-        String title = mtsPage.getOnlineReplenishmentBlockTitle();
-        System.out.println(title);
+        String titleText = mtsPage.getOnlineReplenishmentBlockTitle();
+        System.out.println(titleText);
+
+        String expectedTitle = "Онлайн пополнение\n" +
+                "без комиссии";
+
+        Assert.assertEquals("Заголовок не соответствует ожидаемому", expectedTitle, titleText);
     }
 
     @Test
     public void testPaymentSystemLogos() {
-        String logos = mtsPage.getPaymentSystemLogos();
-        System.out.println(logos);
-        Assert.assertNotNull("Логотип не найден", logos);
+        List<WebElement> logos = mtsPage.getPaymentSystemLogos();
+
+        String[] expectedAlts = {"Visa", "Verified By Visa", "MasterCard", "MasterCard Secure Code", "Белкарт"};
+
+        for (int i = 0; i < logos.size(); i++) {
+            String altText = logos.get(i).getAttribute("alt");
+            System.out.println("Логотип " + (i + 1) + ": " + altText);
+            Assert.assertEquals(expectedAlts[i], altText);
+        }
     }
 
     @Test
     public void testMoreAboutServiceLink() {
-        mtsPage.clickMoreAboutServiceLink();
-        String expectedUrl = "https://www.mts.by/help/poryadok-oplaty-i-bezopasnost-internet-platezhey/";
-        Assert.assertEquals("URL не соответствует ожидаемому", expectedUrl, driver.getCurrentUrl());
+            mtsPage.clickMoreAboutServiceLink();
+
+            String expectedUrl = "https://www.mts.by/help/poryadok-oplaty-i-bezopasnost-internet-platezhey/";
+
+            System.out.println("Текущий URL: " + driver.getCurrentUrl());
+
+            Assert.assertEquals(expectedUrl, driver.getCurrentUrl());
+
+            String titleText = new WebDriverWait(driver, Duration.ofSeconds(10))
+                    .until(ExpectedConditions.visibilityOfElementLocated(By.className("breadcrumbs__list"))).getText();
+
+            System.out.println("Заголовок страницы: " + titleText);
     }
 
+            @Test
+    public void testContinueButtonFunctionality() {
+                mtsPage.enterPhoneNumber("297777777");
+                mtsPage.enterPaymentAmount("10");
+                mtsPage.clickContinueButton();
+                mtsPage.switchToFrame();
+                WebElement cardPage = mtsPage.getCardPage();
+            }
     @Test
-    public void testContinueButtonFunctionality() throws InterruptedException {
-        mtsPage.fillConnectionDetails("297777777", "10", "1234123412341234");
+    public void communicationServices() {
+        mtsPage.enterPhoneNumber("297777777");
+        mtsPage.enterPaymentAmount("10");
+        mtsPage.clickContinueButton();
+        mtsPage.switchToFrame();
+        mtsPage.communicationService("3425 345345 34534", "1226");
     }
 
     @Test
@@ -57,6 +94,11 @@ public class TestMts {
     @Test
     public void debt () {
         mtsPage.debt("77777777", "100");
+    }
+
+    @Test
+    public void testClickNumber() {
+        mtsPage.ClickNumber("297777777", "100");
     }
 
     @After
