@@ -118,7 +118,7 @@ public class MtsPage {
         WebElement userCardName = driver.findElement(By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/app-card-input/form/div[1]/div[3]/app-input/div/div/div[1]/label"));
         WebElement icoCard = driver.findElement(By.xpath("/html/body/app-root/div/div/div/app-payment-container/section/div/app-card-page/div/div[1]/app-card-input/form/div[1]/div[1]/app-input/div/div/div[2]/div"));
     }
-    // метод заполнения рассрочки
+    // метод заполнения домашнего интернета
     public void homeInternet (String internetPhone, String internetSum) {
         WebElement element = driver.findElement(By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/button"));
         element.click();
@@ -131,7 +131,7 @@ public class MtsPage {
         WebElement continueButton = driver.findElement(By.xpath("//*[@id=\"pay-internet\"]/button"));
         continueButton.click();
     }
-    // метод заполнения домашнего интернета
+    // метод заполнения рассрочки
     public void installment (String accountNumber, String instalmentSum) {
         WebElement element = driver.findElement(By.xpath("//*[@id=\"pay-section\"]/div/div/div[2]/section/div/div[1]/div[1]/div[2]/button"));
         element.click();
