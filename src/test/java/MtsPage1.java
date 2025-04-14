@@ -93,7 +93,7 @@ public class MtsPage1 {
     }
 
     public void acceptCookies() {
-            wait.until(ExpectedConditions.elementToBeClickable(acceptButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(acceptButton)).click();
     }
 
     public String getOnlineReplenishmentTitle() {
@@ -112,6 +112,7 @@ public class MtsPage1 {
     public void clickMoreAboutService() {
         wait.until(ExpectedConditions.elementToBeClickable(moreAboutServiceLink)).click();
     }
+
     public void selectArrow() {
         wait.until(ExpectedConditions.elementToBeClickable(selectArrowLocator)).click();
     }
@@ -157,8 +158,8 @@ public class MtsPage1 {
         String sumPlaceholder = sum.getAttribute("placeholder");
         System.out.println("Плейсхолдер для номера карты: " + numberPlaceholder);
         System.out.println("Плейсхолдер для номера суммы: " + sumPlaceholder);
-      // почему-то сайт перестал принимать рандомные данные (может подключили базу данных для сверки)  WebElement continueButton = driver.findElement(By.xpath("//*[@id=\"pay-internet\"]/button"));
-      //  continueButton.click();
+        // почему-то сайт перестал принимать рандомные данные (может подключили базу данных для сверки)  WebElement continueButton = driver.findElement(By.xpath("//*[@id=\"pay-internet\"]/button"));
+        //  continueButton.click();
     }
 
     // метод заполнения домашнего интернета

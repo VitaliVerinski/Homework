@@ -81,17 +81,19 @@ public class TestMts1 {
     }
 
     @Test
-    public void homeInternet () {
+    public void homeInternet() {
         mtsPage.selectArrow();
         mtsPage.homeInternet("297777777", "10");
     }
+
     @Test
-    public void installment () {
+    public void installment() {
         mtsPage.selectArrow();
         mtsPage.installment("7777777777", "100");
     }
+
     @Test
-    public void debt () {
+    public void debt() {
         mtsPage.selectArrow();
         mtsPage.debt("13213246", "100");
     }
