@@ -22,6 +22,7 @@ public class TestMts1 {
         mtsPage = new MtsPage1(driver);
 //        mtsPage.acceptCookies();
     }
+
     @Description("Заголовок")
     @Test
     public void testOnlineReplenishmentBlockTitle() {
@@ -31,6 +32,7 @@ public class TestMts1 {
                 "без комиссии";
         Assert.assertEquals(titleText, expectedTitle, "Заголовок не соответствует ожидаемому");
     }
+
     @Description("Логотипы")
     @Test
     public void testPaymentSystemLogos() {
@@ -41,6 +43,7 @@ public class TestMts1 {
             Assert.assertEquals(actualAlts[i], expectedAlts[i]);
         }
     }
+
     @Description("Подробнее о сервисе")
     @Test
     public void testMoreAboutServiceLink() {
@@ -53,6 +56,7 @@ public class TestMts1 {
         String titleText = mtsPage.getBreadcrumbsText();
         System.out.println("Заголовок страницы: " + titleText);
     }
+
     @Description("Кнопка продолжить")
     @Test
     public void testContinueButtonFunctionality() {
@@ -62,6 +66,7 @@ public class TestMts1 {
         mtsPage.switchToFrame();
         mtsPage.cardNumber();
     }
+
     @Description("Проверка услуг связи")
     @Test
     public void communicationService() {
@@ -77,25 +82,29 @@ public class TestMts1 {
         mtsPage.buttonSum();
         mtsPage.image();
     }
+
     @Description("проверка домашнего интернета")
     @Test
     public void homeInternet() {
         mtsPage.selectArrow();
         mtsPage.homeInternet("297777777", "10");
     }
+
     @Description("проверка рассрочки")
     @Test
     public void installment() {
         mtsPage.selectArrow();
         mtsPage.installment("7777777777", "100");
     }
+
     @Description("проверка задолженности")
     @Test
     public void debt() {
         mtsPage.selectArrow();
         mtsPage.debt("13213246", "100");
     }
-@Description("Завершение работы")
+
+    @Description("Завершение работы")
     @AfterClass
     public void tearDown() {
         if (driver != null) {
